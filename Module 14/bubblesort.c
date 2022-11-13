@@ -12,7 +12,7 @@ int main ()
 
     for(j=0; j<n; j++)
     {
-        printf("******Step %d********\n",j+1);
+        printf("******Step %d********\n",+1);
         for(i=0; i<n; i++)
         {
             printf("For position = %d %d\n",i+1, i+2);
