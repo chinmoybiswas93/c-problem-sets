@@ -4,11 +4,12 @@
 int main ()
 {
     int i=0,n;
-    scanf("%d",&n);
+    char c;
+    scanf("%d%c",&n,&c);
     while(i<n)
     {
-        char name[100];
-        gets(name);
+        char name[102];
+        fgets(name, sizeof(name), stdin);
         int length = strlen(name)-1;
         if (length > 10)
         {
@@ -16,7 +17,6 @@ int main ()
         }
         else
         {
-            printf("Printing from else - ");
             puts(name);
         }
         i++;
