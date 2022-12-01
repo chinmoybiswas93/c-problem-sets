@@ -1,23 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int add_three_nums(int a, int b, int c)
+char get_grade( int mark)
 {
-	return a+b+c;
+    if(mark >=80 && mark <=100)
+    {
+        return 'A';
+    }
+    else if(mark >=60 && mark <=79)
+    {
+        return 'B';
+    }
+    else if(mark >=40 && mark <=59)
+    {
+        return 'C';
+    }
+    else if(mark >=0 && mark <=39)
+    {
+        return 'F';
+    }
 }
-
-int add_two(int a, int b){
-    return add_three_nums(a,b,0);
-}
-
 int main()
 {
-    int num1,num2,result;
-    scanf("%d %d", &num1, &num2);
-
-    result = add_two(num1, num2);
-    printf("%d",result);
-
-
-
+    int mark;
+    char result;
+    scanf("%d",&mark);
+    result = get_grade(mark);
+    printf("%c", result);
     return 0;
 }
